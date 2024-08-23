@@ -1,0 +1,36 @@
+<style>
+    li{
+        padding: 10px;
+        padding-right: 10px;
+        text-shadow: 1;
+        word-spacing: normal;
+
+    }
+    button{
+        padding: 10px;
+        border-radius: 75%;
+        margin-left: 10px;
+    }
+</style>
+<h1><B><I>TODO   LIST </I></B></h1>
+<input  id="inpu">
+<button onclick="add()">Add</button>
+<ul id="li-cont">
+    <li>Home
+         <button onclick="del(event)">delete</button>
+        </li>
+</ul>
+<script>
+    var ul=document.getElementById("li-cont")
+    var inpu=document.getElementById("inpu")
+    function add(){
+        var list=document.createElement("li")
+        list.innerHTML=inpu.value+"<button onclick='del(event)'>delete</button>"
+        ul.append(list)
+    }
+    function del(event)
+    {
+      event.target.parentElement.remove()
+        
+    }
+</script>

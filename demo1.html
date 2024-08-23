@@ -1,0 +1,45 @@
+NUM 1<input id="one" value="">   
+NUM 2    <input id="two" value=""><br><br>
+<button onclick="ash()">ADD +</button> <br><br>
+<button onclick="ash1()">SUB -</button><br><br>
+<button onclick="ash2()">MUL *</button><br><br>
+<button onclick="ash3()">DIV  /</button><br><br><hr>
+
+<p id="res">RESULT:</p>
+<script>
+    var on=document.getElementById("one")
+    var tw=document.getElementById("two")
+    var result=document.getElementById("res")
+    
+    function ash(){
+        var b1value=Number(on.value)
+    var b2value= Number(tw.value)
+        var total=b1value+b2value
+        result.innerHTML="RESULT:"+total
+    }
+
+
+    function ash1(){
+        var b1value=Number(on.value)
+    var b2value= Number(tw.value)
+        var total=b1value-b2value
+        result.innerHTML="RESULT:"+total
+    }  
+    
+    function ash2(){
+        var b1value=Number(on.value)
+    var b2value= Number(tw.value)
+        var total=b1value*b2value
+        result.innerHTML="RESULT:"+total
+    }
+    
+    function ash3(){
+        var b1value=Number(on.value)
+        var b2value= Number(tw.value)
+        var total=b1value/b2value
+        result.innerHTML="RESULT:"+total
+    }
+
+
+
+</script>

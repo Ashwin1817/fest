@@ -1,0 +1,26 @@
+<h1>GUESS THE NUMBER</h1>
+<input id="num">
+<button onclick="check()">check</button>
+<p id="res">you are wrong/right</p>
+
+<script>
+    var inputbox=document.getElementById("num")
+    var res=document.getElementById("res")
+    var random=math.floor(math.random()*3)+1
+    function check(){
+        var entered=inputbox.value
+        if(random==entered)
+        {
+            console.log("congratulations you are right")
+            res.innerHTML="congratulations you are right"
+            alert(
+                "congratulations you won"
+            )
+        }
+        else{
+            console.log("oops!you are wrong")
+            res.innerHTML="oops!you are wrong"
+        }
+
+    }
+</script>

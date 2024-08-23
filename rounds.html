@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Description</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.card {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    border: none;
+    outline: none;
+}
+
+.tab:hover,
+.tab.active {
+    background-color: #555;
+}
+
+.rounds-description {
+    display: flex;
+    flex-direction: row;
+}
+
+.round {
+    display: none;
+    width: 100%;
+}
+
+.round.active {
+    display: block;
+}
+
+.round ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        margin: 5px 0;
+    }
+
+    .rounds-description {
+        flex-direction: column;
+    }
+}
+
+    </style>
+
+    <div class="card">
+        <p>ROUNDS DESCRIPTION</p>
+        <div class="tabs">
+            <button class="tab active" data-round="1">ROUND 1</button>
+            <button class="tab" data-round="2">ROUND 2</button>
+            <button class="tab" data-round="3">ROUND 3</button>
+        </div>
+
+        <div class="rounds-description">
+            <div class="round active" id="round-1">
+                <ul>
+                    <li>Time duration (30 minutes).</li>
+                    <li>Set of questions will be provided and to be answered within the given time.</li>
+                </ul>
+            </div>
+            <div class="round" id="round-2">
+                <ul>
+                    <li>Time duration (45 minutes).</li>
+                    <li>Set of tasks related to cybersecurity (hash value, steganography, password cracking, etc.) will be provided. The team who completes the task within the given time will be selected for the next round.</li>
+                </ul>
+            </div>
+            <div class="round" id="round-3">
+                <ul>
+                    <li>Time duration (2 hours).</li>
+                    <li>Read the story provided carefully.</li>
+                    <li>Team members have only 5 minutes to investigate inside the crime scene.</li>
+                    <li>You will be given an autopsy report and suspect description.</li>
+                    <li>Don’t touch or misplace the evidence.</li>
+                    <li>Any 2 members from the team can raise only 3 questions to the suspects and eyewitness.</li>
+                    <li>Your final report points should be related to the story, and the killer must be identified with reasons mentioned.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+   <script>
+    // JavaScript to handle tab clicks and show the corresponding round description
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Remove 'active' class from all tabs and round descriptions
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.round').forEach(r => r.classList.remove('active'));
+
+        // Add 'active' class to the clicked tab and corresponding round
+        this.classList.add('active');
+        document.getElementById(`round-${this.dataset.round}`).classList.add('active');
+    });
+});
+
+   </script>
+</body>
+</html>

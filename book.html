@@ -1,0 +1,51 @@
+<style>
+    .one{
+        background-color: gray;
+        color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        z-index: 1;
+        display: none;
+    }
+    .two{
+        width: 50%;
+        height: 30%;
+        left: 30%;
+        position: absolute;
+        background-color: antiquewhite;
+        color: black;
+        z-index: 4;
+        border-radius: 20px;
+        display: none;
+
+    }
+</style>
+<button id="oo" onclick="ash()">show</button>
+<div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui a nesciunt iure fuga natus modi iusto sed aspernatur porro alias quisquam, aliquam earum numquam repellendus beatae adipisci architecto eos consequuntur!</div>
+<div class="two"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum impedit, architecto repudiandae maxime</p> 
+     <center><button  id="ooc" onclick="ashh()">close</button></center>
+</div>
+<script>
+    var cont=document.querySelector(".one")
+    var  popup=document.querySelector(".two")
+   
+
+    var ooo=document.getElementById("oo")
+    ooo.addEventListener("click" ,function(){
+        popup.style.display="block"
+         cont.style.display="block"
+
+    })
+    var oooo=document.getElementById("ooc")
+    oooo.addEventListener("click" ,function(){
+        popup.style.display="none"
+         cont.style.display="none"
+
+    })
+
+
+</script>

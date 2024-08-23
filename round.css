@@ -1,0 +1,75 @@
+
+
+.card {
+max-width: 600px;
+margin: 50px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.tabs {
+display: flex;
+justify-content: space-around;
+margin-bottom: 20px;
+}
+
+.tab {
+flex: 1;
+text-align: center;
+padding: 10px;
+background-color: #333;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+margin: 0 5px;
+border: none;
+outline: none;
+}
+
+.tab:hover,
+.tab.active {
+background-color: #555;
+}
+
+.rounds-description {
+display: flex;
+flex-direction: row;
+}
+
+.round {
+display: none;
+width: 100%;
+}
+
+.round.active {
+display: block;
+}
+
+.round ul {
+list-style-type: disc;
+margin-left: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+.tabs {
+    flex-direction: column;
+}
+
+.tab {
+    margin: 5px 0;
+}
+
+.rounds-description {
+    flex-direction: column;
+}
+}
